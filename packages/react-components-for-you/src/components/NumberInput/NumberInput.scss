@@ -1,0 +1,19 @@
+@use '../../styles/scss/typography.scss';
+@use '../../styles/scss/paddings.scss';
+@use '../../styles/scss/margins.scss';
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/elevations.scss';
+@use '../../styles/scss/mixins.scss';
+@use '../../styles/scss/variables.module.scss';
+
+.#{variables.$prefix}-number-input {
+  color: colors.$text;
+
+  @include mixins.input-wrapper();
+  @include mixins.input-with-shadows();
+  @include typography.text-regular();
+
+  label {
+    margin-bottom: margins.$xs;
+  }
+}

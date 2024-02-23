@@ -1,0 +1,35 @@
+@use '../../scss/elevations.scss';
+@use '../../scss/margins.scss';
+@use '../../scss/paddings.scss';
+@use '../../scss/colors.scss';
+@use '../../scss/typography.scss';
+@use '../../scss/mixins.scss';
+
+.elevation {
+  background-color: #ffffff;
+  margin-bottom: margins.$xl;
+
+  @include typography.text-regular();
+  @include mixins.rounded-border();
+
+  &-level-1 {
+    @include elevations.level-1();
+  }
+
+  &-level-2 {
+    @include elevations.level-2();
+  }
+
+  &-level-3 {
+    @include elevations.level-3();
+  }
+
+  &-level-4 {
+    @include elevations.level-4();
+  }
+
+  &-text {
+    color: colors.$title;
+    padding: paddings.$sm;
+  }
+}

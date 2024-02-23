@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    // disable build artifacts
+    "noEmit": true,
+    // type checking
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "useUnknownInCatchVariables": true
+  },
+  "include": ["src", "src/rcl.stories.tsx"],
+  "types": ["node", "jest", "@testing-library/jest-dom"]
+}

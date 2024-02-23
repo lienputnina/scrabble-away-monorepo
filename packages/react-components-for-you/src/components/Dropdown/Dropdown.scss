@@ -1,0 +1,60 @@
+@use '../../styles/scss/typography.scss';
+@use '../../styles/scss/paddings.scss';
+@use '../../styles/scss/margins.scss';
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/elevations.scss';
+@use '../../styles/scss/mixins.scss';
+@use '../../styles/scss/variables.module.scss';
+
+.#{variables.$prefix}-dropdown {
+  color: colors.$text;
+  position: relative;
+
+  @include mixins.input-wrapper();
+  @include typography.text-regular();
+
+  label {
+    margin-bottom: margins.$xs;
+  }
+
+  .dropdown {
+    @include mixins.input-base();
+    @include elevations.level-1();
+  }
+
+  .dropdown:hover {
+    @include elevations.level-2();
+  }
+
+  .menu {
+    position: absolute;
+    max-height: 18.75rem;
+    overflow: auto;
+    background-color: colors.$background-main--light;
+    border: 1px colors.$text solid;
+    top: 59px;
+
+    @include mixins.input-width();
+    @include mixins.rounded-border();
+    @include elevations.level-2();
+
+    &.hidden {
+      visibility: hidden;
+    }
+
+    li {
+      padding: paddings.$xs;
+      list-style: none;
+
+      &[aria-selected='true'] {
+        background-color: colors.$background-main;
+        color: colors.$accent;
+      }
+
+      &:hover {
+        background-color: colors.$background-main--dark;
+        color: colors.$accent--hover;
+      }
+    }
+  }
+}

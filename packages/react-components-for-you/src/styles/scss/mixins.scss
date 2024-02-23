@@ -1,0 +1,52 @@
+@use './colors.scss';
+@use './paddings.scss';
+@use './margins.scss';
+@use './elevations.scss';
+@use './variables.module.scss';
+
+@mixin rounded-border {
+  border-radius: 0.4rem;
+}
+
+@mixin focus-visible-outline {
+  &:focus-visible {
+    outline: 2px solid colors.$accent;
+    outline-offset: 2px;
+    @include rounded-border();
+  }
+}
+
+@mixin input-width {
+  width: 100%;
+  min-width: 12.5rem;
+}
+
+@mixin input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 31.25rem;
+  margin: margins.$xs margins.$xs margins.$md 0;
+}
+
+@mixin input-base {
+  height: variables.$input-height;
+  padding: paddings.$xs paddings.$md;
+  background-color: white;
+  border: 1px colors.$text solid;
+  line-height: 1rem;
+
+  @include input-width();
+  @include focus-visible-outline();
+  @include rounded-border();
+}
+
+@mixin input-with-shadows {
+  input {
+    @include input-base();
+    @include elevations.level-1();
+  }
+  input:hover {
+    @include elevations.level-2();
+  }
+}

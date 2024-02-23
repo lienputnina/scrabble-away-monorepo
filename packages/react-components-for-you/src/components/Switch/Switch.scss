@@ -1,0 +1,120 @@
+@use '../../styles/scss/typography.scss';
+@use '../../styles/scss/paddings.scss';
+@use '../../styles/scss/margins.scss';
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/elevations.scss';
+@use '../../styles/scss/mixins.scss';
+@use '../../styles/scss/variables.module.scss';
+
+@mixin switch-knob-size {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.#{variables.$prefix}-switch-toggle {
+  display: flex;
+  flex-direction: column;
+  padding: paddings.$xs 0 paddings.$xs 0;
+  margin: margins.$xs 0 margins.$xs 0;
+  color: colors.$text;
+
+  @include mixins.focus-visible-outline();
+  @include mixins.input-width();
+  @include typography.text-regular();
+
+  .label {
+    width: fit-content;
+  }
+
+  &.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      margin-right: margins.$sm;
+    }
+  }
+
+  &.right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+
+    .label {
+      margin-left: margins.$sm;
+    }
+  }
+
+  .switch-button {
+    display: flex;
+    align-items: center;
+
+    .switch-handle {
+      display: inline-block;
+      position: relative;
+      min-width: 2.5rem;
+      height: 1.25rem;
+      border-radius: 0.6875rem;
+      margin-right: margins.$sm;
+      background-color: colors.$accent;
+      opacity: 0.6;
+      @include elevations.level-1();
+
+      &:hover {
+        @include elevations.level-2();
+      }
+
+      .switch-knob {
+        display: inline-block;
+        position: absolute;
+        top: 0.175rem;
+        left: 0.2188rem;
+        border-radius: 0.5rem;
+        background: colors.$background-main--light;
+        opacity: 0.9;
+        @include switch-knob-size();
+      }
+    }
+
+    .switch-off {
+      display: inline;
+      width: 1.875rem;
+    }
+
+    .switch-on {
+      display: none;
+      width: 1.875rem;
+    }
+
+    &.is-checked {
+      .switch-handle {
+        background-color: colors.$accent;
+        opacity: 1;
+        .switch-knob {
+          top: 0.175rem;
+          left: 1.4063rem;
+          background: colors.$background-main--light;
+          opacity: 1;
+          @include switch-knob-size();
+        }
+      }
+
+      .switch-on {
+        display: inline;
+      }
+
+      .switch-off {
+        display: none;
+      }
+    }
+  }
+}

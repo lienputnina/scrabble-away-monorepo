@@ -1,0 +1,16 @@
+@use '../../styles/scss/typography.scss';
+@use '../../styles/scss/margins.scss';
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/mixins.scss';
+@use '../../styles/scss/variables.module.scss';
+
+.#{variables.$prefix}-radio-input-group {
+  margin: margins.$xs margins.$xs margins.$md 0;
+  color: colors.$text;
+
+  @include typography.text-regular();
+
+  ul {
+    @include mixins.focus-visible-outline();
+  }
+}

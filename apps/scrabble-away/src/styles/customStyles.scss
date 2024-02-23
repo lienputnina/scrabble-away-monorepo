@@ -1,0 +1,28 @@
+@use "@liene-putnina/react-components-for-you/dist/styles/scss/typography.scss";
+@use "@liene-putnina/react-components-for-you/dist/styles/scss/paddings.scss";
+@use "@liene-putnina/react-components-for-you/dist/styles/scss/variables.module.scss";
+@use "@liene-putnina/react-components-for-you/dist/styles/scss/colors.module.scss";
+@use "@liene-putnina/react-components-for-you/dist/styles/scss/mixins.scss";
+
+@import "@liene-putnina/react-components-for-you/dist/index.css";
+
+body > * {
+  @include typography.font-family;
+  color: colors.$text;
+}
+
+main#main {
+  width: 100%;
+  height: calc(100vh - #{variables.$header-height});
+  padding: paddings.$lg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mixins.focus-visible-outline();
+  a {
+    color: colors.$accent;
+  }
+  a:hover {
+    color: colors.$accent--hover;
+  }
+}

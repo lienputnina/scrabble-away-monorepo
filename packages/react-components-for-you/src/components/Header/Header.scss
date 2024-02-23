@@ -1,0 +1,29 @@
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/paddings.scss';
+@use '../../styles/scss/elevations.scss';
+@use '../../styles/scss/variables.module.scss';
+
+$logo-size: 2.5rem;
+
+.#{variables.$prefix}-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: variables.$header-height;
+  padding: paddings.$xl;
+  background-color: colors.$board-background;
+
+  @include elevations.level-1();
+
+  #logo {
+    position: absolute;
+    left: paddings.$xl;
+    width: $logo-size;
+    overflow: hidden;
+
+    &:hover {
+      @include elevations.level-1();
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use './margins.scss';
+
+@mixin font-family {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin font-style-italic {
+  font-style: italic;
+}
+
+@mixin font-weight-light {
+  font-weight: 200;
+}
+
+@mixin font-weight-regular {
+  font-weight: 400;
+}
+
+@mixin font-weight-bold {
+  font-weight: 600;
+}
+
+@mixin heading-1 {
+  @include font-family();
+  @include font-weight-light();
+  font-size: 6rem;
+  line-height: 7rem;
+}
+
+@mixin heading-2 {
+  @include font-family();
+  @include font-weight-light();
+  font-size: 3.75rem;
+  line-height: 4.5rem;
+}
+
+@mixin heading-3 {
+  @include font-family();
+  @include font-weight-regular();
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+@mixin heading-4 {
+  @include font-family();
+  @include font-weight-regular();
+  font-size: 2.125rem;
+  line-height: 2.25rem;
+}
+
+@mixin text-regular {
+  @include font-family();
+  @include font-weight-regular();
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin text-bold {
+  @include text-regular();
+  @include font-weight-bold;
+}
+
+@mixin text-italic {
+  @include text-regular();
+  @include font-style-italic();
+}

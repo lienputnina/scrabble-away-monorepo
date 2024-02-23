@@ -1,0 +1,72 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import '../../scss/colors.scss';
+import colors from '../../scss/colors.module.scss';
+
+<Meta title="Styles/Colors" />
+
+<ColorPalette>
+  <ColorItem
+    title="Backgrounds"
+    colors={{
+      '$background-main': colors['backgroundMain'],
+      '$background-main--light': colors['backgroundMainLight'],
+      '$background-main--dark': colors['backgroundMainDark'],
+    }}
+  />
+  <ColorItem
+    title="Board backgrounds"
+    colors={{
+      'board-background': colors['boardBackground'],
+      'board-background--dark': colors['boardBackgroundDark'],
+    }}
+  />
+  <ColorItem
+    title="Accent colors"
+    colors={{
+      accent: colors['accent'],
+      'accent--hover': colors['accentHover'],
+    }}
+  />
+  <ColorItem
+    title="Text"
+    colors={{
+      text: colors['text'],
+      'text--light': colors['textLight'],
+      'text--hover': colors['textHover'],
+      title: colors['title'],
+      'title--hover': colors['titleHover'],
+      'sub-title': colors['subTitle'],
+      'sub-title--light': colors['subTitleLight'],
+    }}
+  />
+  <ColorItem
+    title="Tiles"
+    colors={{
+      tile: colors['tile'],
+      'tile--hover': colors['tileHover'],
+      'tile-text': colors['tileText'],
+      'tile-text--hover': colors['tileTextHover'],
+    }}
+  />
+  <ColorItem
+    title="Special tiles"
+    colors={{
+      'letter-double': colors['letterDouble'],
+      'letter-double--hover': colors['letterDoubleHover'],
+      'letter-triple': colors['letterTriple'],
+      'letter-triple--hover': colors['letterTripleHover'],
+      'word-double': colors['wordDouble'],
+      'word-double--hover': colors['wordDoubleHover'],
+      'word-triple': colors['wordTriple'],
+      'word-triple--hover': colors['wordTripleHover'],
+    }}
+  />
+  <ColorItem
+    title="Semantic colors"
+    colors={{
+      danger: colors['danger'],
+      positive: colors['positive'],
+      warning: colors['warning'],
+    }}
+  />
+</ColorPalette>

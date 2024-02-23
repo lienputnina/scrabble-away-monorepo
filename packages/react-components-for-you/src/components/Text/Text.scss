@@ -1,0 +1,33 @@
+@use '../../styles/scss/typography.scss';
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/variables.module.scss';
+@use '../../styles/scss/margins.scss';
+
+.#{variables.$prefix}-text {
+  color: colors.$text;
+  margin-bottom: margins.$sm;
+
+  &.regular {
+    @include typography.text-regular();
+  }
+
+  &.bold {
+    @include typography.text-bold();
+  }
+
+  &.italic {
+    @include typography.text-italic();
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}

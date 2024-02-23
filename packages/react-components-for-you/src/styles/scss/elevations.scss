@@ -1,0 +1,21 @@
+$shadow-color: #00000033;
+
+@mixin level-1 {
+  box-shadow: 0px 4px 5px $shadow-color, 0px 1px 10px $shadow-color,
+    0px 2px 4px $shadow-color;
+}
+
+@mixin level-2 {
+  box-shadow: 0px 9px 12px $shadow-color, 0px 3px 16px $shadow-color,
+    0px 5px 6px $shadow-color;
+}
+
+@mixin level-3 {
+  box-shadow: 0px 16px 24px $shadow-color, 0px 6px 30px $shadow-color,
+    0px 8px 10px $shadow-color;
+}
+
+@mixin level-4 {
+  box-shadow: 0px 24px 38px $shadow-color, 0px 9px 46px $shadow-color,
+    0px 11px 15px $shadow-color;
+}

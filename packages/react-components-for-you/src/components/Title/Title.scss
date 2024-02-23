@@ -1,0 +1,41 @@
+@use '../../styles/scss/typography.scss';
+@use '../../styles/scss/margins.scss';
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/variables.module.scss';
+
+.#{variables.$prefix}-title {
+  display: flex;
+  color: colors.$title;
+
+  &.heading-one {
+    @include typography.heading-1();
+    margin-bottom: margins.$lg;
+  }
+
+  &.heading-two {
+    @include typography.heading-2();
+    margin-bottom: margins.$lg;
+  }
+
+  &.heading-three {
+    @include typography.heading-3();
+    margin-bottom: margins.$lg;
+  }
+
+  &.heading-four {
+    @include typography.heading-4();
+    margin-bottom: margins.$lg;
+  }
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+}

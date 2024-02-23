@@ -1,0 +1,87 @@
+// Backgrounds
+$background-main: #d9d9d9;
+$background-main--light: #f7f7f7;
+$background-main--dark: #c6c6c6;
+
+// Board Backgrounds
+$board-background: #eee8ea;
+$board-background--dark: #cab7bc;
+
+// Accent colors
+$accent: #591d2d;
+$accent--hover: #73263a;
+
+// Text
+$text: #4d4d4d;
+$text--light: #666666;
+$text--hover: $accent--hover;
+$title: #1a1a1a;
+$title--hover: $accent--hover;
+$sub-title: #bda5ab;
+$sub-title--light: #cdbbc0;
+
+// Tiles
+$tile: #875c68;
+$tile--hover: #7a4a57;
+$tile-text: #ffffff;
+$tile-text--hover: #e6e6e6;
+
+// Special tiles
+$letter-double: #76a67c;
+$letter-double--hover: #6a9570;
+$letter-triple: #354f52;
+$letter-triple--hover: #30474a;
+$word-double: #e09f3e;
+$word-double--hover: #ca8f38;
+$word-triple: #9e2a2b;
+$word-triple--hover: #8e2627;
+
+// Semantic
+$danger: #cc0000;
+$positive: #1fc600;
+$warning: #ffff66;
+
+:export {
+  // Backgrounds
+  backgroundMain: $background-main;
+  backgroundMainLight: $background-main--light;
+  backgroundMainDark: $background-main--dark;
+
+  // Board Backgrounds
+  boardBackground: $board-background;
+  boardBackgroundDark: $board-background--dark;
+
+  // Accent colors
+  accent: $accent;
+  accentHover: $accent--hover;
+
+  // Text
+  text: $text;
+  textLight: $text--light;
+  textHover: $text--hover;
+  title: $title;
+  titleHover: $title--hover;
+  subTitle: $sub-title;
+  subTitleLight: $sub-title--light;
+
+  // Tiles
+  tile: $tile;
+  tileHover: $tile--hover;
+  tileText: $tile-text;
+  tileTextHover: $tile-text--hover;
+
+  // Special tiles
+  letterDouble: $letter-double;
+  letterDoubleHover: $letter-double--hover;
+  letterTriple: $letter-triple;
+  letterTripleHover: $letter-triple--hover;
+  wordDouble: $word-double;
+  wordDoubleHover: $word-double--hover;
+  wordTriple: $word-triple;
+  wordTripleHover: $word-triple--hover;
+
+  // Semantic
+  danger: $danger;
+  positive: $positive;
+  warning: $warning;
+}

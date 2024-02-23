@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "cSpell.words": ["liene", "lintmyride", "Putniņa", "rcfu"],
+    "typescript.tsdk": "node_modules/typescript/lib"
+  },
+  "extensions": {
+    "recommendations": [
+      "streetsidesoftware.code-spell-checker",
+      "dbaeumer.vscode-eslint",
+      "davidanson.vscode-markdownlint",
+      "unifiedjs.vscode-mdx",
+      "esbenp.prettier-vscode",
+      "wmaurer.change-case",
+      "andys8.jest-snippets",
+      "infeng.vscode-react-typescript",
+      "aaron-bond.better-comments"
+    ]
+  }
+}

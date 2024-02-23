@@ -1,0 +1,40 @@
+@use '../../scss/typography.scss';
+@use '../../scss/margins.scss';
+@use '../../scss/colors.scss';
+
+#typography-main {
+  color: colors.$title;
+
+  h1 {
+    @include typography.heading-1();
+    margin-bottom: margins.$xs;
+  }
+
+  h2 {
+    @include typography.heading-2();
+    margin-bottom: margins.$xs;
+  }
+
+  h3 {
+    @include typography.heading-3();
+    margin-bottom: margins.$xs;
+  }
+
+  h4 {
+    @include typography.heading-4();
+    margin-bottom: margins.$xs;
+  }
+
+  p {
+    margin-bottom: margins.$xs;
+    @include typography.text-regular();
+
+    &#bold {
+      @include typography.text-bold();
+    }
+
+    &#italic {
+      @include typography.text-italic();
+    }
+  }
+}

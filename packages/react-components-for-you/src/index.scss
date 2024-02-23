@@ -1,0 +1,20 @@
+//Global styles
+@import './styles/scss/global.scss';
+@import './styles/scss/colors.scss';
+@import './styles/scss/margins.scss';
+@import './styles/scss/paddings.scss';
+@import './styles/scss/typography.scss';
+@import './styles/scss/variables.module.scss';
+
+//Component styles
+@import './src/components/Button/Button.scss';
+@import './src/components/Dropdown/Dropdown.scss';
+@import './src/components/Header/Header.scss';
+@import './src/components/NumberInput/NumberInput.scss';
+@import './src/components/RadioInputGroup/RadioInput/RadioInput.scss';
+@import './src/components/RadioInputGroup/RadioInputGroup.scss';
+@import './src/components/Sidebar/Sidebar.scss';
+@import './src/components/Switch/Switch.scss';
+@import './src/components/Text/Text.scss';
+@import './src/components/TextInput/TextInput.scss';
+@import './src/components/Title/Title.scss';

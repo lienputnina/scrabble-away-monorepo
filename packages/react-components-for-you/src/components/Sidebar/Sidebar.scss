@@ -1,0 +1,131 @@
+@use '../../styles/scss/typography.scss';
+@use '../../styles/scss/paddings.scss';
+@use '../../styles/scss/elevations.scss';
+@use '../../styles/scss/colors.scss';
+@use '../../styles/scss/variables.module.scss';
+
+$sidebar-width: 17rem;
+$sidebar-title-size: 1.125rem;
+$sidebar-section-padding: paddings.$lg;
+$open-button-horizontal-offset: -5rem;
+
+@keyframes fadeOut {
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+.#{variables.$prefix}-sidebar {
+  position: absolute;
+  top: 0;
+  width: $sidebar-width;
+  height: 100%;
+  background-color: colors.$background-main--light;
+  color: colors.$text;
+
+  transition-timing-function: ease-in-out;
+  transition: width 0.5s;
+
+  @include typography.text-regular();
+  @include elevations.level-3();
+
+  div.sidebar-wrapper {
+    transition-timing-function: ease-in-out;
+    transition: opacity 0.5s;
+  }
+
+  &.hidden {
+    width: 0;
+
+    div.sidebar-wrapper {
+      opacity: 0;
+      animation: 0.5s fadeOut;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &.left {
+    left: 0;
+
+    .sidebar-open-button {
+      position: absolute;
+      right: $open-button-horizontal-offset;
+    }
+  }
+
+  &.right {
+    right: 0;
+
+    .sidebar-open-button {
+      position: absolute;
+      left: $open-button-horizontal-offset;
+    }
+  }
+
+  .sidebar-open-button {
+    top: 0.5rem;
+    transition: opacity 0.5s;
+
+    svg path {
+      fill: colors.$accent;
+    }
+
+    &:hover svg path {
+      fill: colors.$accent--hover;
+    }
+  }
+
+  &:not(.hidden) .sidebar-open-button {
+    opacity: 0;
+    animation: 0.5s fadeOut;
+    animation-fill-mode: forwards;
+  }
+
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0.5rem $sidebar-section-padding;
+    border-bottom: 1px solid gray;
+
+    div {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+
+      h2 {
+        font-size: $sidebar-title-size;
+        line-height: $sidebar-title-size;
+        margin: 0;
+
+        @include typography.font-weight-bold();
+      }
+    }
+
+    button {
+      svg path {
+        fill: colors.$accent;
+      }
+
+      &:hover svg path {
+        fill: colors.$accent--hover;
+      }
+    }
+  }
+
+  .sidebar-content {
+    padding: $sidebar-section-padding;
+  }
+
+  .sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: $sidebar-section-padding;
+    border-top: 1px solid gray;
+  }
+}

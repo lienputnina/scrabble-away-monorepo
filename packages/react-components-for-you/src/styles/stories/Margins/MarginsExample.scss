@@ -1,0 +1,43 @@
+@use '../../scss/margins.scss';
+@use '../../scss/mixins.scss';
+@use '../../scss/typography.scss';
+
+.margin {
+  border: 0.1563rem solid #002bec;
+  background-color: #444343;
+  color: #ffffff;
+
+  @include mixins.rounded-border();
+  @include typography.text-regular();
+
+  &-main {
+    border: 0.1563rem solid #ff0000;
+    margin-bottom: margins.$md;
+
+    @include mixins.rounded-border();
+  }
+  &-xs {
+    margin: margins.$xs;
+  }
+
+  &-sm {
+    margin: margins.$sm;
+  }
+
+  &-md {
+    margin: margins.$md;
+  }
+
+  &-lg {
+    margin: margins.$lg;
+  }
+
+  &-xl {
+    margin: margins.$xl;
+  }
+
+  &-text {
+    @include mixins.rounded-border();
+    padding: 0.1563rem;
+  }
+}
